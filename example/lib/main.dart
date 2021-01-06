@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await FlutterChannel.platformVersion("channel_string");
+      platformVersion = await FlutterChannel.getChannelName("channel_string");
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
